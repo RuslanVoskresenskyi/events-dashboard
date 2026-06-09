@@ -18,7 +18,6 @@ events = ["click", "login", "search", "purchase", "logout"]
 USER_COUNT = 10000
 
 now = datetime.now()
-sixty_days_ago = now - timedelta(days=60)
 
 try:
   for i in range(USER_COUNT):
@@ -28,7 +27,7 @@ try:
     events_count = random.randint(3, 7)
     for j in range(events_count):
       event_name = random.choice(events)
-      occurred_at = sixty_days_ago + timedelta(days=random.randint(0, 60))
+      occurred_at = now - timedelta(days=random.randint(0, 60))
       cursor.execute(
         "INSERT INTO events (user_id, event_name, occurred_at) VALUES  (%s, %s, %s)",
         (user_id, event_name, occurred_at)
