@@ -11,6 +11,14 @@ node_modules/
 dist/
 .next/
 .output/
+dist-ssr
+*.local
+.nitro
+.tanstack
+.wrangler
+.vinxi
+__unconfig*
+todos.json
 
 # Docker
 *.log
@@ -22,3 +30,5 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+
