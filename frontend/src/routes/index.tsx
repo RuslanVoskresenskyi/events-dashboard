@@ -1,12 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
 export const Route = createFileRoute('/')({ component: Home })
 
 function Home() {
   const [dashboardSummary, setDashboardSummary] = useState({
     totalEvents: 0,
-    totalUsers: 0
+    totalUsers: 0,
   })
 
   useEffect(() => {
