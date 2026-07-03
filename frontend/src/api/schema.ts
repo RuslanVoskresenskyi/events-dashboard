@@ -2,7 +2,7 @@ import { gql } from 'graphql-request'
 
 export const schemas = {
   dashboardSummary: gql`
-  {
+  query getDashboardSummary {
     dashboardSummary {
       totalEvents
       totalUsers
@@ -10,7 +10,7 @@ export const schemas = {
   }
   `,
   eventsPerDay: gql`
-  {
+  query getEventsPerDay {
     eventsPerDay {
       date
       count
@@ -18,7 +18,7 @@ export const schemas = {
   }
   `,
   eventsPerType: gql`
-  {
+  query getEventsPerType {
     eventsPerType {
       eventName
       count
